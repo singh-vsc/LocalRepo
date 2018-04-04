@@ -1,0 +1,10 @@
+<div class="mz-l-container">
+	<span class="mz-pagetitle" id="productreview">{{ labels.productrating }}</span>
+
+	<div id="productreview1" data-mz-action="showReviews">
+		{% dump model %}
+		
+	</div>
+
+</div>
+

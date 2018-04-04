@@ -1,0 +1,19 @@
+<div id="taxnshipping">
+
+<select data-mz-value="usStates" class="mz-pagingcontrols-pagesize-dropdown" autocomplete="off">
+    {% block states-dropdown %}
+      {% for size in themeSettings.usStates %}
+        <option value="{{ size.abbreviation }}">{{size.name}}</option>
+      {% endfor %}
+    {% endblock states-dropdown %}
+ </select>
+
+<select data-mz-value="usShipping" class="mz-pagingcontrols-pagesize-dropdown" autocomplete="off">
+ {% block shipping-dropdown %}
+ 	{% for shipping in themeSettings.shippingData %}
+ 		<option value="{{ shipping.method }}">{{ shipping.method }}</option>	     		
+	{% endfor %}
+ {% endblock shipping-dropdown %}
+ </select>
+</div>
+{% require_script "modules/tax-shipping" %}
